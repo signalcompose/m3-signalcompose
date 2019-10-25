@@ -1,0 +1,101 @@
+@import '_base.scss';
+
+.mainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10;
+  .logo {
+    padding: 20px;
+    display: block;
+    width: 200px;
+  }
+  .menu {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    a {
+      padding: 0 15px;
+    }
+  }
+}
+
+.mv {
+  &__container {
+    position: fixed;
+    background-image: url(./images/poster.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50vw;
+    height: 100vh;
+    transition: all 100ms;
+  }
+}
+
+.mainSec {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 70%;
+  min-height: 100vh;
+  mix-blend-mode: difference;
+  background-color: white;
+  font-feature-settings: "palt";
+  padding: 0 50px;
+}
+
+.sec1 {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@mixin leadbox {
+  position: relative;
+}
+
+.sec2 {
+  padding: 50px 0 0;
+  &__leadBox {
+    @include leadbox();
+  }
+}
+
+.sec3 {
+  padding: 50px 0 0;
+  &__leadBox {
+    @include leadbox();
+  }
+  &__colBox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  ul {
+    li {
+      h4 {
+        margin: 0 0 5px;
+      }
+      p {
+        margin: 0 0 15px;
+      }
+    }
+  }
+}
+
+.sec4 {
+  padding: 50px 0 0;
+}
+
+.sec5 {
+  padding: 50px 0 100px;
+}

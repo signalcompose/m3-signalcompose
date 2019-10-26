@@ -1,11 +1,11 @@
 function orgFloor(value, base) {
-  return Math.floor(value * base) / base;
+  return (Math.floor(value * base) / base) + 0.1;
 }
 
 function mainVizOpacity() {
   var contentHeight = document.getElementById('content').offsetHeight;
   var raw = window.pageYOffset / (contentHeight - window.innerHeight);
-  var calcTransparent = orgFloor(raw, 10) > 0.1 ? orgFloor(raw, 10) - 0.2 : 0;
+  var calcTransparent = orgFloor(raw, 10);
   document.getElementById('mv').style.opacity = 1 - calcTransparent;
   console.log('run');
 }

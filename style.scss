@@ -41,8 +41,9 @@
   right: 0;
   width: 70%;
   min-height: 100vh;
-  mix-blend-mode: difference;
-  background-color: white;
+  // mix-blend-mode: difference;
+  // background-color: white;
+  backdrop-filter: blur(3px);
   font-feature-settings: "palt";
   padding: 0 50px;
 }
@@ -62,6 +63,7 @@
 
 @mixin leadbox {
   position: relative;
+  // text-shadow: 0 0 8px rgba(0, 0, 0, .6);
 }
 
 .sec2 {

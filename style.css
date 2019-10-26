@@ -72,8 +72,8 @@ a {
   right: 0;
   width: 70%;
   min-height: 100vh;
-  mix-blend-mode: difference;
-  background-color: white;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   -webkit-font-feature-settings: "palt";
           font-feature-settings: "palt";
   padding: 0 50px;
